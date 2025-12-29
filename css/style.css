@@ -1,0 +1,414 @@
+/* /author-website/css/style.css */
+/* ==============================
+   Global Styles
+   ============================== */
+:root {
+  --color-bg: #f7f7f7;
+  --color-primary: #2d2d2d;
+  --color-secondary: #4a4a4a;
+  --color-accent: #0055a5;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --color-footer: #222;
+  --color-link-hover: #0055a5;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ==============================
+   Navigation Bar
+   ============================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--color-accent);
+  background: #eaf4fb;
+}
+
+/* ==============================
+   Hero Section (Home)
+   ============================== */
+.hero {
+  max-width: 700px;
+  margin: 3rem auto 2rem auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.book-cover {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 1.5rem;
+}
+
+.book-desc {
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #003e7a;
+}
+
+.btn-secondary {
+  background: #eaf4fb;
+  color: var(--color-accent);
+  font-weight: 500;
+  border: 1px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* ==============================
+   Call-to-Action Section
+   ============================== */
+.cta {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.cta h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   About Author Page
+   ============================== */
+.about-author {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto 2rem auto;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  padding: 2rem 1rem;
+  align-items: flex-start;
+}
+
+.author-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 1rem;
+  background: #e0e0e0;
+}
+
+.bio {
+  flex: 1;
+}
+
+.bio h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bio h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.bio ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   Book Details Page
+   ============================== */
+.book-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 2rem auto;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  padding: 2rem 1rem;
+  align-items: flex-start;
+}
+
+.book-cover-large img {
+  width: 220px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  background: #e0e0e0;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.book-info h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-info ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.book-info ul li {
+  margin-bottom: 0.5rem;
+}
+
+.book-info blockquote {
+  font-style: italic;
+  color: var(--color-secondary);
+  border-left: 3px solid var(--color-accent);
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.purchase-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ==============================
+   Contact Page
+   ============================== */
+.contact-section {
+  max-width: 500px;
+  margin: 3rem auto 2rem auto;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  padding: 2rem 1rem;
+}
+
+.contact-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fafafa;
+  color: var(--color-primary);
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: #f0f8ff;
+}
+
+.form-success {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+  background: var(--color-footer);
+  color: var(--color-white);
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-content nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer-content nav a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ==============================
+   Responsive Design
+   ============================== */
+@media (max-width: 900px) {
+  .about-author,
+  .book-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-cover-large img,
+  .author-photo {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero,
+  .cta,
+  .about-author,
+  .book-details,
+  .contact-section {
+    padding: 1.2rem 0.5rem;
+    margin: 2rem auto 1rem auto;
+  }
+  .book-cover,
+  .book-cover-large img,
+  .author-photo {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+/* ==============================
+   Utility Classes
+   ============================== */
+.hidden {
+  display: none !important;
+}
