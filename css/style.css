@@ -670,9 +670,8 @@ html.dark-mode footer {
 
   .dark-mode-toggle {
     position: fixed;
-    top: 50%;
-    right: 4.5rem;
-    transform: translateY(-50%);
+    top: 0.8rem;
+    right: 4.2rem;
     margin-left: 0;
     padding-left: 0;
     border-left: none;
