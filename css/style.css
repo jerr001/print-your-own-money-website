@@ -130,6 +130,7 @@ body {
   margin-left: 1rem;
   padding-left: 1rem;
   border-left: 1px solid var(--border-color);
+  z-index: 1001;
 }
 
 .dark-mode-btn {
@@ -152,6 +153,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  z-index: 1001;
 }
 
 .dark-mode-btn::before {
