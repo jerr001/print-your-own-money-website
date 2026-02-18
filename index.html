@@ -1,5 +1,5 @@
 <!-- /author-website/index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,50 +15,256 @@
     <!-- Navigation Bar -->
     <header>
       <nav class="navbar">
-        <a href="index.html" class="nav-logo">Gideon Ijidakinro</a>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="book.html">Book</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <a href="#home" class="nav-logo">Gideon Ijidakinro</a>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#book">Book</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dark-mode-toggle">
+            <button
+              id="darkModeBtn"
+              class="dark-mode-btn"
+              title="Toggle Dark Mode"
+            >
+              🌙
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-      <section class="hero">
-        <h1>Gideon Ijidakinro</h1>
-        <p class="tagline">
-          Helping thinkers and builders understand how value becomes income
-        </p>
-        <img
-          src="images/Print Money.jpeg"
-          alt="Book Cover"
-          class="book-cover"
-        />
-        <div class="book-desc">
-          <p>
-            What if value is created before money ever appears? Print Your Money
-            is not about shortcuts, hype, or financial tricks. It is a
-            reflective, practical invitation to rethink how money actually
-            enters your life—through ideas, discipline, service, creativity,
-            faith, and consistency.
-          </p>
-          <p>
-            Written in clear, human language, this book explores how mindset,
-            learning, and purpose shape income long before a paycheck is
-            printed. It challenges passive thinking and calls the reader to take
-            responsibility for growth—personally, spiritually, and practically.
-          </p>
+      <!-- Hero / Home Section -->
+      <section id="home" class="hero hero-row">
+        <div class="hero-image-col">
+          <img
+            src="images/Print Money.jpeg"
+            alt="Book Cover"
+            class="book-cover hero-book-img"
+          />
         </div>
-        <a href="book.html" class="btn-primary">Buy the Book</a>
+        <div class="hero-content-col">
+          <h1>Gideon Ijidakinro</h1>
+          <p class="tagline">
+            Helping thinkers and builders understand how value becomes income
+          </p>
+          <div class="book-desc">
+            <p>
+              <strong>Print Your Money</strong> is not about shortcuts, hype, or
+              financial tricks. It is a reflective, practical invitation to
+              rethink how money actually enters your life—through ideas,
+              discipline, service, creativity, faith, and consistency.
+            </p>
+            <p>
+              Written in clear, human language, this book explores how mindset,
+              learning, and purpose shape income long before a paycheck is
+              printed. It challenges passive thinking and calls the reader to
+              take responsibility for growth—personally, spiritually, and
+              practically.
+            </p>
+            <a href="#book" class="btn-primary">Buy the Book</a>
+          </div>
+        </div>
       </section>
 
+      <!-- About Section -->
+      <section id="about" class="about-author">
+        <img
+          src="images/gideon.jpeg"
+          alt="Gideon Ijidakinro Photo"
+          class="author-photo"
+        />
+        <div class="bio">
+          <h1>About Gideon Ijidakinro</h1>
+          <p>
+            Gideon Ijidakinro is a reflective writer, faith-centered thinker,
+            and lifelong learner based in Belgium. His work explores how value
+            is formed long before money appears—through learning, discipline,
+            service, creativity, and personal responsibility. Rather than
+            writing from a place of perceived mastery, Gideon writes from lived
+            experience. His writing is shaped by observation, honest questions,
+            and a commitment to growth—personally, spiritually, and practically.
+            Gideon's perspective sits at the intersection of faith, work, and
+            learning. He believes sustainable provision is not the result of
+            shortcuts or hype, but of wisdom applied consistently over time.
+            Print Your Money reflects this conviction: that money follows value,
+            and value is created by the person you become.
+          </p>
+          <h2>Writing Journey</h2>
+          <p>
+            Gideon's writing journey began not as a career move, but as a
+            personal discipline. He writes to think clearly, to learn
+            deliberately, and to document growth in real time. Rather than
+            waiting for expertise to feel complete, Gideon chose to write from
+            the middle of the process—while learning new skills, building
+            projects, and confronting the realities of work, faith, and
+            responsibility.
+            <br />
+            Print Your Money emerged from years of observation: noticing how
+            value is formed long before money arrives, how consistency outlasts
+            motivation, and how faith must be expressed through action to
+            produce fruit. The book is not a summary of success, but a record of
+            principles tested through learning, failure, reflection, and
+            persistence. For Gideon, writing is both a mirror and a map—a way to
+            make sense of the journey while inviting others to walk it with
+            intention.
+          </p>
+          <h2>Values & Themes</h2>
+          <ul>
+            <li>Value Before Reward</li>
+            <li>Faith Expressed Through Work</li>
+            <li>Growth Through Learning</li>
+            <li>Clarity Over Noise</li>
+            <li>Personal Responsibility</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Book Section -->
+      <section id="book" class="book-details">
+        <div class="book-cover-large">
+          <img src="images/Print Money.jpeg" alt="Book Cover Large" />
+        </div>
+        <div class="book-info">
+          <h1>
+            Print Your Own Money: A Motivational Blueprint for Turning Ideas
+            into Value and Value into Wealth
+          </h1>
+          <h2>Synopsis</h2>
+          <p>
+            Print Your Money is a reflective and practical guide for anyone who
+            wants to understand how money is actually created—without hype,
+            shortcuts, or get-rich-quick illusions. Instead of focusing on money
+            itself, the book shifts attention to what comes first: ideas,
+            learning, discipline, service, creativity, faith, and consistency.
+            Gideon Ijidakinro invites readers to rethink income not as something
+            chased, but as something that flows from value intentionally
+            developed over time.
+          </p>
+          <p>
+            Written in clear, human language, the book challenges passive
+            thinking and encourages readers to take responsibility for
+            growth—personally, spiritually, and practically. It speaks
+            especially to beginners, creatives, and thoughtful individuals who
+            want meaning alongside provision. You may not control the
+            economy—but you can develop the person who creates value within it.
+          </p>
+          <h2>Key Benefits & Lessons</h2>
+          <ul>
+            <li>
+              <b>How money is created before it is earned</b> <br />
+              Understand the principles behind value creation—not just income.
+            </li>
+            <li>
+              <b>How to turn ideas into practical value</b> <br />
+              Learn how skills, creativity, and learning translate into
+              real-world provision.
+            </li>
+            <li>
+              <b>Why mindset and discipline matter more than hustle</b> <br />
+              Move away from burnout culture toward sustainable growth.
+            </li>
+            <li>
+              <b>How to build simple systems that support income</b> <br />
+              Focus on clarity, consistency, and structure instead of
+              complexity.
+            </li>
+            <li>
+              <b>How to grow from zero without shortcuts</b> <br />
+              A grounded approach for beginners willing to learn and commit.
+            </li>
+          </ul>
+          <h2>Testimonials</h2>
+          <blockquote>
+            "This book didn't try to motivate me with noise—it gave me clarity.
+            It helped me understand that money is not something you chase, but
+            something that follows value. As someone starting from zero, this
+            changed how I think about learning, work, and responsibility." –
+            Reader A
+          </blockquote>
+          <blockquote>
+            "Print Your Money is refreshingly honest. It connects faith,
+            discipline, and creativity in a way that feels real and sustainable.
+            I appreciated that the author writes from the journey, not from a
+            pedestal. This is a book you return to as you grow." – Reader B
+          </blockquote>
+          <div class="purchase-buttons">
+            <a
+              href="https://www.amazon.com/dp/B0GD8VPJJK"
+              target="_blank"
+              class="btn-primary"
+              >Buy on Amazon</a
+            >
+            <a
+              href="https://selar.com/91zf696919"
+              target="_blank"
+              class="btn-secondary"
+              >Buy on Selar</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <h1>Contact Gideon Ijidakinro</h1>
+        <form
+          id="contactForm"
+          action="https://formsubmit.co/ijidakinrogideon@gmail.com"
+          method="POST"
+        >
+          <!-- Formsubmit hidden fields -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://yourdomain.com/?success=1"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div id="formSuccess" class="form-success" style="display: none">
+            Thank you for your message! Gideon will get back to you soon.
+          </div>
+        </form>
+      </section>
+
+      <!-- CTA Section -->
       <section class="cta">
-        <h2>Ready to be inspired?</h2>
-        <p>Explore the book, learn about the author, or get in touch today.</p>
-        <a href="book.html" class="btn-secondary">Learn More</a>
+        <h2>Ready to Start Your Journey?</h2>
+        <p>
+          Explore the book, learn more about the author, or reach out today.
+        </p>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
       </section>
     </main>
 
@@ -67,9 +273,9 @@
       <div class="footer-content">
         <p>&copy; 2025 Gideon Ijidakinro. All rights reserved.</p>
         <nav>
-          <a href="index.html">Home</a> | <a href="about.html">About</a> |
-          <a href="book.html">Book</a> |
-          <a href="contact.html">Contact</a>
+          <a href="#home">Home</a> | <a href="#about">About</a> |
+          <a href="#book">Book</a> |
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </footer>
