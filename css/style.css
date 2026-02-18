@@ -1,14 +1,15 @@
 /* /author-website/css/style.css */
-/* ==============================
-   Global Styles
-   ============================== */
-:root {
-  --color-bg: #f7f7f7;
-  --color-primary: #2d2d2d;
-  --color-secondary: #4a4a4a;
-  --color-accent: #0055a5;
+  --color-bg: #f4f8fb;
+  --color-primary: #232946;
+  --color-secondary: #393e6e;
+  --color-accent: #f7c873;
+  --color-accent2: #3ddad7;
   --color-white: #fff;
   --color-border: #e0e0e0;
+  --color-footer: #232946;
+  --color-link-hover: #3ddad7;
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --transition-main: 0.3s cubic-bezier(.4,0,.2,1);
   --color-footer: #222;
   --color-link-hover: #0055a5;
   --font-main: "Segoe UI", Arial, sans-serif;
@@ -18,6 +19,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--transition-main), color var(--transition-main);
 }
 
 body {
@@ -31,6 +35,8 @@ body {
 
 /* ==============================
    Navigation Bar
+  box-shadow: 0 2px 8px rgba(35,41,70,0.04);
+  transition: box-shadow var(--transition-main);
    ============================== */
 .navbar {
   position: sticky;
@@ -39,6 +45,7 @@ body {
   background: var(--color-white);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
+  transition: color var(--transition-main);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,6 +63,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  position: relative;
   gap: 2rem;
   margin: 0;
   padding: 0;
@@ -89,18 +97,25 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
 }
 
+  animation: fadeInUp 1s cubic-bezier(.4,0,.2,1);
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
+  color: var(--color-accent2);
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
 .tagline {
   font-size: 1.2rem;
   color: var(--color-accent);
   margin-bottom: 1.5rem;
 }
 
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1.5s cubic-bezier(.4,0,.2,1);
 .book-cover {
   width: 160px;
   height: 240px;
@@ -110,9 +125,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+  transition: transform var(--transition-main), box-shadow var(--transition-main);
 .book-desc {
   margin-bottom: 1.5rem;
 }
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(61,218,215,0.13), 0 4px 16px rgba(35,41,70,0.09);
 
 .btn-primary,
 .btn-secondary {
@@ -126,28 +144,35 @@ body {
   margin: 0.5rem 0;
   transition: background 0.2s, color 0.2s;
 }
+  position: relative;
+  overflow: hidden;
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-white);
-  font-weight: 600;
-}
+  background: linear-gradient(90deg, var(--color-accent2), var(--color-accent));
+  color: var(--color-primary);
+  border: none;
+  box-shadow: 0 4px 16px rgba(61,218,215,0.09);
 
 .btn-primary:hover {
   background: #003e7a;
-}
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent2));
+  color: var(--color-white);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(61,218,215,0.13);
 
 .btn-secondary {
   background: #eaf4fb;
-  color: var(--color-accent);
-  font-weight: 500;
-  border: 1px solid var(--color-accent);
-}
+  background: var(--color-white);
+  color: var(--color-accent2);
+  border: 2px solid var(--color-accent2);
 
 .btn-secondary:hover {
   background: var(--color-accent);
+  background: var(--color-accent2);
   color: var(--color-white);
-}
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(61,218,215,0.13);
 
 /* ==============================
    Call-to-Action Section
@@ -179,17 +204,20 @@ body {
   background: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 -2px 12px rgba(35,41,70,0.04);
+  transition: box-shadow var(--transition-main);
   padding: 2rem 1rem;
   align-items: flex-start;
 }
-
-.author-photo {
-  width: 180px;
-  height: 180px;
+  color: var(--color-accent2);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: color var(--transition-main);
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  margin-bottom: 1rem;
+  color: var(--color-accent);
   background: #e0e0e0;
 }
 
