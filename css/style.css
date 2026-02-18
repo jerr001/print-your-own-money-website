@@ -671,7 +671,7 @@ html.dark-mode footer {
   .dark-mode-toggle {
     position: absolute;
     right: 3.2rem;
-    top: -0.4rem;
+    top: -0.7rem;
     margin-left: 0;
     padding-left: 0;
     border-left: none;
@@ -679,9 +679,9 @@ html.dark-mode footer {
   }
 
   .dark-mode-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
   }
 
   .nav-links a::after {
