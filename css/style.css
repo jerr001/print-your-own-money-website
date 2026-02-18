@@ -133,26 +133,55 @@ body {
 }
 
 .dark-mode-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
+  background: linear-gradient(
+    135deg,
+    var(--gray-lighter) 0%,
+    var(--bg-secondary) 100%
+  );
+  border: 2px solid var(--border-color);
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  padding: 0;
-  width: 30px;
-  height: 30px;
+  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.dark-mode-btn:hover {
-  transform: scale(1.15);
+.dark-mode-btn::before {
+  content: "🌙";
+  position: absolute;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 html.dark-mode .dark-mode-btn::before {
   content: "☀️";
-  font-size: 1.3rem;
+  opacity: 1;
+  transform: scale(1) rotate(180deg);
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(44, 90, 160, 0.25);
+  border-color: var(--blue-main);
+}
+
+html.dark-mode .dark-mode-btn {
+  background: linear-gradient(135deg, #34495e 0%, #1a1a2e 100%);
+  border-color: var(--blue-main);
+}
+
+html.dark-mode .dark-mode-btn:hover {
+  box-shadow: 0 4px 16px rgba(44, 90, 160, 0.4);
 }
 
 /* Hamburger Menu */
@@ -638,9 +667,19 @@ html.dark-mode footer {
   }
 
   .dark-mode-toggle {
+    position: absolute;
+    right: 3.2rem;
+    top: 0.7rem;
     margin-left: 0;
     padding-left: 0;
     border-left: none;
+    border-bottom: none;
+  }
+
+  .dark-mode-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 
   .nav-links a::after {
